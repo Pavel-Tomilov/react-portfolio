@@ -1,0 +1,25 @@
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20PX;
+}
+
+.nav__link {
+  position: relative;
+  background-color: inherit;
+  border-radius: 30px;
+  padding: 5px 10px;
+  z-index: 0;
+  transition: background-color .3s ease-in-out;
+}
+
+.nav__link:hover {
+  background-color: #505459;
+  border-radius: 30px;
+}
+
+.nav__link:active {
+  background-color: #094c86;
+  border-radius: 30px;
+}

@@ -1,65 +1,28 @@
-import './css/normalize.css'
+import "normalize.css";
 import "./App.css"
-import './css/style.css'
+import marusia  from './images/marusia.jpg';
+import irvas  from './images/irvas.jpg';
+import student  from './images/table-student.jpg';
+import highPass from './images/high-pass.jpg';
+import blanchard from './images/blanchard.jpg';
+import skillbox from './images/skillbox.jpg';
 
+import Header from './components/Header';
 
 function App() {
 
   return (
       <div className='App'>
-       
+
+        <Header />
+<main>
 
 
-<label className="switch">
-  <input className="switch__input" type="checkbox" role="switch" />
-  <svg className="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-    <g fill="none" stroke="#fff" strokeWidth="1" strokeLinecap="round">
-      <circle cx="6" cy="6" r="2" />
-      <g strokeDasharray="1.5 1.5">
-        <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
-        <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
-      </g>
-    </g>
-  </svg>
-  <svg className="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-    <g fill="none" stroke="#fff" strokeWidth="1" strokeLinejoin="round" transform="rotate(-45,6,6)">
-      <path
-        d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z" />
-    </g>
-  </svg>
-  <span className="switch__sr">Dark Mode</span>
-</label>
-<header>
-  <div className="container header__container">
-    <div className="nav__logo">Frontend Developer</div>
-     {/* Бургер-иконка  */}
-    <div className="burger-container">
-      <div className="burger-menu">
-        <div className="burger-line"></div>
-        <div className="burger-line"></div>
-        <div className="burger-line"></div>
-      </div>
-    </div>
+</main>
+ 
 
-    {/* <!-- Затемнение фона --> */}
-    <div className="overlay"></div>
 
-    <nav className="nav">
-      <ul className="nav__list">
-        <li className="nav__item"><a className="nav__link link-reset" href="#about">Обо мне</a></li>
-        <li className="nav__item"><a className="nav__link link-reset" href="#projects">Проекты</a></li>
-        <li className="nav__item"><a className="nav__link link-reset" href="#skills">Ключевые навыки</a></li>
-        <li className="nav__item"><a className="nav__link link-reset" href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+
 <section id="about">
   <div className="container">
     <h2>Обо мне</h2>
@@ -127,7 +90,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src="./images/marusia.jpg" alt="VK Маруся" className="card__icon" />
+                <img src={marusia} alt="VK Маруся" className="card__icon" />
               </div>
             </div>
             <div className="face face2">
@@ -145,7 +108,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src="./images/irvas.jpg" alt="Ирвас окна" className="card__icon" />
+                <img src={irvas} alt="Ирвас окна" className="card__icon" />
               </div>
             </div>
             <div className="face face2">
@@ -164,7 +127,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src="./images/table-student.jpg" alt="Blanchard" className="card__icon" />
+                <img src={student} alt="Blanchard" className="card__icon" />
               </div>
             </div>
             <div className="face face2">
@@ -181,7 +144,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img className="card__icon" src="./images/high-pass.jpg" alt="HIGH PASS" />
+                <img className="card__icon" src={highPass} alt="HIGH PASS" />
               </div>
             </div>
             <div className="face face2">
@@ -199,7 +162,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src="./images/blanchard.jpg" alt="Blanchard" className="card__icon" />
+                <img src={blanchard} alt="Blanchard" className="card__icon" />
               </div>
             </div>
             <div className="face face2">
@@ -217,7 +180,7 @@ function App() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src="./images/skillbox.jpg" alt="Skillbox" className="card__icon" />
+                <img src={skillbox} alt="Skillbox" className="card__icon" />
               </div>
             </div>
             <div className="face face2">
