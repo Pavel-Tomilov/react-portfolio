@@ -1,0 +1,98 @@
+/* Стили бургер-меню */
+
+.burger-container {
+  display: none;
+  justify-content: flex-end;
+}
+
+.burger-menu {
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+}
+
+.burger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+/* Мобильные стили */
+
+@media(max-width: 768px) {
+
+  .nav__logo {
+    margin-right: auto;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+  }
+
+
+  .burger-container {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top .3s ease-in-out;
+    z-index: 999;
+    padding: 20px 0;
+  }
+
+  .nav.active {
+    top: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav__item {
+    margin: 15px 0;
+  }
+
+  /* Анимация бургера */
+  .burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  /* Затемнение фона */
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 998;
+  }
+
+
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+

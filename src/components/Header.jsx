@@ -2,6 +2,7 @@ import HeaderLogo from "./Header/HeaderLogo/HeaderLogo";
 import HeaderNav from "./Header/HeaderNav/HeaderNav";
 import "./Header.css";
 import Switch from "./Header/Switch/Switch";
+import Burger from "./Burger/Burger";
 
 const Header = () => {
     return ( 
@@ -12,19 +13,9 @@ const Header = () => {
 <HeaderLogo />
 <HeaderNav />
 <Switch />
-
+<Burger />
              
-          {/* <!-- Бургер-иконка --> */}
-          <div  className="burger-container">
-            <div  className="burger-menu">
-              <div  className="burger-line"></div>
-              <div  className="burger-line"></div>
-              <div  className="burger-line"></div>
-            </div>
-          </div>
-    
-          {/* <!-- Затемнение фона --> */}
-          <div  className="overlay"></div>
+         
     
          
         </div>
